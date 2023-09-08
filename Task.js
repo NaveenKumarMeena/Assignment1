@@ -5,8 +5,7 @@ import routes from "./routes/routes.js";
 import Connection from "./database/db.js"; //On server side it is compulsory to write .js after db file
 
 const app = express();
-app.use(cors());
-app.use(bodyParser.json({ extended: true }));
+app.use(bodyParser.json({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: true }));
 Connection();
 

@@ -18,11 +18,13 @@ export const getTask = async (request, response) => {
   }
 };
 export const updateTask = async (request, response) => {
-  const taskId = req.params.id;
-  const newStatus = req.body.status;
+  try {
+    const taskId = request.params.id;
+    const newStatus = request.body.status;
 
-  Task.findByIdAndUpdate(taskId, { status: newStatus }, (err, result) => {
-    if (err) return res.status(500).send(err);
-    res.send(result);
-  });
+    const tt = await Task.updateOne({ _id: taskId }, { status: newStatus });
+    return response.status(200).json(tt);
+  } catch (error) {
+    return response.status(500).json(error.message);
+  }
 };
