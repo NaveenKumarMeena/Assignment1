@@ -1,4 +1,5 @@
 **Table of Contents**
+
 1.Project Structure
 2.Dependencies
 3.Setting Up the Database
@@ -7,7 +8,7 @@
 6.Sample Requests
 7.Error Handling
 
-*Project Structure:
+*Project Structure=>
 
 The project consists of the following files and directories:
 
