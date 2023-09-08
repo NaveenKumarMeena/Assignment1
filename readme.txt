@@ -8,7 +8,7 @@
 6.Sample Requests
 7.Error Handling
 
-*Project Structure=>
+*Project Structure==>
 
 The project consists of the following files and directories:
 
